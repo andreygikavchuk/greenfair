@@ -26,7 +26,7 @@ if (get_sub_field('display_type')) {
                     $link = get_permalink($item->ID);
                     $excerpt = get_the_excerpt($item->ID);
                     $commentsCount = get_comments_number($item->ID);
-                    $author = get_the_author($item->ID);
+                    $author = get_the_author_meta('user_nicename');
                     $date = get_the_date('F j, Y', $item);
                     $authorUrl = get_author_posts_url($item->post_author, $author);
                     ?>
