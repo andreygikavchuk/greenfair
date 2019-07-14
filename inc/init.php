@@ -265,3 +265,10 @@ if (!function_exists('greenfair_logo')) {
         echo ($logo) ? sprintf('<a class="navbar-brand custom_navbar-brand" href="%1$s">%2$s</a>', get_home_url(), $logo) : '';
     }
 }
+
+if (!function_exists('greenfair_excerpt_length')) {
+    add_filter( 'excerpt_length', 'greenfair_excerpt_length' );
+    function greenfair_excerpt_length( $number ){
+        return 30;
+    }
+}
